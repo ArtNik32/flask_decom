@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Main page
+{% endblock %}
+
+{% block content_title %}
+    Test main page
+{% endblock %}
+
+{% block content %}
+    {{ color_1 }}
+    {{ color_2 }}
+    {{ color_3 }}
+    {{ color_4 }}
+    {{ color_5 }}
+
+        <!-- Container for our gallery -->
+    <div class="container">
+
+        <!-- Main view of our gallery -->
+        <div class="main_view">
+            <img src="{{url_for('static', filename='image_vert.jpg')}}" id="main" alt="IMAGE">
+        </div>
+
+        <!-- All images with side view -->
+        <div class="side_view">
+            <img src="{{url_for('static', filename='image_vert.jpg')}}" onclick="change(this.src)">
+            <img src="{{url_for('static', filename='image_horiz.jpg')}}" onclick="change(this.src)">
+            <img src="{{url_for('static', filename='image_circle.jpg')}}" onclick="change(this.src)">
+            <img src="{{url_for('static', filename='image_triang.jpg')}}" onclick="change(this.src)">
+        </div>
+        <div class="side_view">
+            <img src="{{url_for('static', filename='image_vert_rect_45.jpg')}}" onclick="change(this.src)">
+            <img src="{{url_for('static', filename='image_horiz.jpg')}}" onclick="change(this.src)">
+            <img src="{{url_for('static', filename='image_circle.jpg')}}" onclick="change(this.src)">
+            <img src="{{url_for('static', filename='image_triang.jpg')}}" onclick="change(this.src)">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const change = src => {
+            document.getElementById('main').src = src
+        }
+    </script>
+{% endblock %}
+

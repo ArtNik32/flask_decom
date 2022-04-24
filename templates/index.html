@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Main page
+{% endblock %}
+
+{% block content_title %}
+    Test main page
+{% endblock %}
+
+{% block content %}
+    Hello, {{ n }}!
+
+   <form action="/result" method="POST">
+       <input type="text" id="hex_1" name="color_1" placeholder="#000000"></input>
+       <input type="color" id="color_1">
+       <script>
+        let colorInput_1 = document.querySelector('#color_1');
+        let hexInput_1 = document.querySelector('#hex_1')
+
+        colorInput_1.addEventListener('input', () =>{
+            let color_1 = colorInput_1.value;
+            hexInput_1.value = color_1;
+        });
+       </script>
+       <br>
+       <input type="text" id="hex_2" name="color_2" placeholder="#000000"></input>
+       <input type="color" id="color_2">
+       <script>
+        let colorInput_2 = document.querySelector('#color_2');
+        let hexInput_2 = document.querySelector('#hex_2')
+
+        colorInput_2.addEventListener('input', () =>{
+            let color_2 = colorInput_2.value;
+            hexInput_2.value = color_2;
+        });
+       </script>
+       <br>
+       <input type="text" id="hex_3" name="color_3" placeholder="#000000"></input>
+       <input type="color" id="color_3">
+       <script>
+        let colorInput_3 = document.querySelector('#color_3');
+        let hexInput_3 = document.querySelector('#hex_3')
+
+        colorInput_3.addEventListener('input', () =>{
+            let color_3 = colorInput_3.value;
+            hexInput_3.value = color_3;
+        });
+       </script>
+       <br>
+       <input type="text" id="hex_4" name="color_4" placeholder="#000000"></input>
+       <input type="color" id="color_4">
+       <script>
+        let colorInput_4 = document.querySelector('#color_4');
+        let hexInput_4 = document.querySelector('#hex_4')
+
+        colorInput_4.addEventListener('input', () =>{
+            let color_4 = colorInput_4.value;
+            hexInput_4.value = color_4;
+        });
+       </script>
+       <br>
+       <input type="text" id="hex_5" name="color_5" placeholder="#000000"></input>
+       <input type="color" id="color_5">
+       <script>
+        let colorInput_5 = document.querySelector('#color_5');
+        let hexInput_5 = document.querySelector('#hex_5')
+
+        colorInput_5.addEventListener('input', () =>{
+            let color_5 = colorInput_5.value;
+            hexInput_5.value = color_5;
+        });
+       </script>
+       <br>
+       <button type="submit">Click</button>
+   </form>
+
+{% endblock %}
+
