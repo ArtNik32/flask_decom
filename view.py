@@ -10,8 +10,7 @@ from draw_vert_rect_45 import draw_image_vert_rect_45
 
 @app.route('/')
 def index():
-    name = 'Art'
-    return render_template('index.html', n = name)
+    return render_template('index.html')
 
 @app.route('/result', methods=['POST'])
 def result_vert():
