@@ -9,11 +9,6 @@
 {% endblock %}
 
 {% block content %}
-    {{ color_1 }}
-    {{ color_2 }}
-    {{ color_3 }}
-    {{ color_4 }}
-    {{ color_5 }}
 
         <!-- Container for our gallery -->
     <div class="container">
@@ -32,7 +27,7 @@
         </div>
         <div class="side_view">
             <img src="{{url_for('static', filename='image_vert_rect_45.jpg')}}" onclick="change(this.src)">
-            <img src="{{url_for('static', filename='image_horiz.jpg')}}" onclick="change(this.src)">
+            <img src="{{url_for('static', filename='image_pixel.jpg')}}" onclick="change(this.src)">
             <img src="{{url_for('static', filename='image_circle.jpg')}}" onclick="change(this.src)">
             <img src="{{url_for('static', filename='image_triang.jpg')}}" onclick="change(this.src)">
         </div>
