@@ -8,6 +8,7 @@ from draw_circle import draw_image_circle
 from draw_triangle import draw_image_triangle
 from draw_vert_rect_45 import draw_image_vert_rect_45
 from draw_pixel import draw_image_pixel
+from draw_polka_dot import draw_image_polka_dot
 
 @app.route('/')
 def index():
@@ -44,6 +45,7 @@ def result_vert():
             draw_image_triangle(colors)
             draw_image_vert_rect_45(colors)
             draw_image_pixel(colors)
+            draw_image_polka_dot(colors)
             return render_template('result.html')
         else:
             return render_template('index.html')
