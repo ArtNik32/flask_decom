@@ -8,10 +8,11 @@ def draw_image_polka_dot(colors):
     # background
     width_bg = 4000
     height_bg = 4000
-    color_pixel = colors
+    color_pixel = []
+    for color in colors:
+        color_pixel.append(color)
     bg_color = random.choice(color_pixel)
     im1 = Image.new(mode='RGB', size=(width_bg, height_bg), color=bg_color)
-
     draw = ImageDraw.Draw(im1)
 
     # count
