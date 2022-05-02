@@ -1,15 +1,15 @@
 from PIL import Image, ImageDraw
 import random
 
-def draw_image_rectangle_diag_half(colors):
+def draw_image_rct_in_rct(colors):
     # background
     width_bg = 4000
     height_bg = 4000
     im1 = Image.new(mode='RGB', size=(width_bg, height_bg), color='grey')
 
     # pixel
-    width_pixel = 400
-    height_pixel = 400
+    width_pixel = 200
+    height_pixel = 200
     pixel_color = colors
 
     # count
@@ -32,4 +32,4 @@ def draw_image_rectangle_diag_half(colors):
                                       n_sides=3, fill=random.choice(pixel_color))
                 im1.paste(pixel_, (pixel_.size[0] // 2 * j, pixel_.size[1] // 2 * i))
 
-    im1.save('static/image_rect_diag_half.jpg', format='JPEG')
+    im1.save('static/image_rct_in_rct.jpg', format='JPEG')

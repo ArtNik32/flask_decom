@@ -10,6 +10,7 @@ from draw_vert_rect_45 import draw_image_vert_rect_45
 from draw_pixel import draw_image_pixel
 from draw_polka_dot import draw_image_polka_dot
 from draw_rectangle_diag_half import draw_image_rct_diag_half
+from draw_rectangle_in_rectangle import draw_image_rct_in_rct
 
 @app.route('/')
 def index():
@@ -48,6 +49,7 @@ def result_vert():
             draw_image_pixel(colors)
             draw_image_polka_dot(colors)
             draw_image_rct_diag_half(colors)
+            draw_image_rct_in_rct(colors)
             return render_template('result.html')
         else:
             return render_template('index.html')
