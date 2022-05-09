@@ -12,6 +12,7 @@ from draw_polka_dot import draw_image_polka_dot
 from draw_rectangle_diag_half import draw_image_rct_diag_half
 from draw_rectangle_in_rectangle import draw_image_rct_in_rct
 from draw_circle_wave import draw_image_circle_wave
+from draw_circle_triangle_in_rectangle import draw_image_crc_trn_in_rct
 
 @app.route('/')
 def index():
@@ -52,6 +53,7 @@ def result_vert():
             draw_image_rct_diag_half(colors)
             draw_image_rct_in_rct(colors)
             draw_image_circle_wave(colors)
+            draw_image_crc_trn_in_rct(colors)
             return render_template('result.html')
         else:
             return render_template('index.html')
