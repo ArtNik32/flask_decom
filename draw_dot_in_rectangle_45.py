@@ -10,7 +10,9 @@ def draw_dot_in_rct_45(colors):
     # pixel
     width_pixel = 400
     height_pixel = 400
-    pixel_color = colors
+    pixel_color = []
+    for color in colors:
+        pixel_color.append(color)
     color_1 = random.choice(pixel_color)
     pixel_color.remove(color_1)
     color_2 = random.choice(pixel_color)

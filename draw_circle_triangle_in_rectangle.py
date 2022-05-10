@@ -23,10 +23,8 @@ def draw_image_crc_trn_in_rct(colors):
                 draw_ = ImageDraw.Draw(pixel_)
                 figure = random.choice([0, 1])
                 if figure == 0:
-                    print(figure)
                     draw_.regular_polygon(bounding_circle=(width_pixel // 2, height_pixel // 2, width_pixel // 2.5), n_sides=3, fill=random.choice(pixel_color))
                 else:
-                    print(figure)
                     draw_.ellipse((20, 20, width_pixel - 20, height_pixel - 20), fill=random.choice(pixel_color))
                 im1.paste(pixel_, (width_pixel * j, height_pixel * i))
     else:
